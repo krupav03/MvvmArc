@@ -9,7 +9,7 @@ The **Todo List Application** is a React Native project that demonstrates the im
 - **Task Management:** Create, read, update, and delete tasks.
 - **MVVM Architecture:** Utilizes a structured approach to separate UI, business logic, and data management.
 - **Cross-Platform:** Compatible with both iOS and Android.
-- **Local Storage:** Tasks are saved locally for offline access.
+
 
 ### Architecture Overview
 
