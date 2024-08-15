@@ -69,12 +69,13 @@ To get started with the Todo List Application, follow these steps:
 
   ## Feature Demo
 
+## Feature Demo
+
 Here's a demonstration of the feature:
 
-![Feature Demo](assets/giphy(1).gif)
+![Feature Demo 1](assets/giphy%281%29.gif)
+![Feature Demo 2](assets/giphy.gif)
 
-![Feature Demo](assets/giphy.gif)
-
-  
 **Happy Coding!**
+
 
