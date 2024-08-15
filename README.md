@@ -66,6 +66,15 @@ To get started with the Todo List Application, follow these steps:
   npm run ios
   npm run android
 
+
+  ## Feature Demo
+
+Here's a demonstration of the feature:
+
+![Feature Demo](assets/giphy.gif)
+
+![Feature Demo](assets/giphy(1).gif)
+
   
 **Happy Coding!**
 
