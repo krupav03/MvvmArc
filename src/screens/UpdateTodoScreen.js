@@ -1,13 +1,19 @@
 import React from "react";
-import { View, TextInput, Text, TouchableOpacity,StyleSheet } from "react-native";
+import {
+  View,
+  TextInput,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 import useNewTodoController from "../view-controller/useNewTodoController";
 import useUpdateTodoController from "../view-controller/useUpdateTodoController";
-import { useRoute } from '@react-navigation/native'; 
+import { useRoute } from "@react-navigation/native";
 
-function UpdateTodoScreen(props) {
+function UpdateTodoScreen() {
   const route = useRoute();
   const { onChangeText, onClickDelete, onClickUpdate, todoText } =
-    useUpdateTodoController(route.params);
+    useUpdateTodoController(route);
   return (
     <View style={styles.background}>
       <View style={styles.headingView}>
@@ -32,12 +38,11 @@ function UpdateTodoScreen(props) {
   );
 }
 
-
 export default UpdateTodoScreen;
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#f5f5f5', // Light grey background
+    backgroundColor: "#f5f5f5", // Light grey background
     padding: 20,
   },
   headingView: {
@@ -45,31 +50,30 @@ const styles = StyleSheet.create({
   },
   headingText: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   formView: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   input: {
     height: 40,
-    borderColor: '#ccc',
+    borderColor: "#ccc",
     borderWidth: 1,
     borderRadius: 5,
     paddingHorizontal: 10,
     marginBottom: 20,
-    backgroundColor: '#fff', // White background for input
+    backgroundColor: "#fff", // White background for input
   },
   btn: {
-    backgroundColor: '#007bff', // Blue background
+    backgroundColor: "#007bff", // Blue background
     padding: 15,
     borderRadius: 5,
-    alignItems: 'center',
+    alignItems: "center",
     marginBottom: 10,
   },
   btnText: {
-    color: '#fff', // White text
+    color: "#fff", // White text
     fontSize: 16,
   },
 });
-

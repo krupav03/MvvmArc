@@ -32,10 +32,13 @@ export const todoSlice = createSlice({
         return todoItem;
       });
       state.todos.concat([action.payload]);
+      // state - we will get the fetchTodo value and the list of todos
+      // in action we get whatever we send on the payload which means the latest value the user is trying to update.
+      // if the existing todo id from the list matches with the latest payload's id then we consider the latest title to update
     },
     deleteTodo: (state, action) => {
       state.todos = state.todos.filter(
-        (todoItem) => todoItem.id !== action.payload.id
+        (todoItem) => todoItem.id !== action.payload
       );
     },
   },

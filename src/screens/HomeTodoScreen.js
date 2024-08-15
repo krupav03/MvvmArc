@@ -1,14 +1,25 @@
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity,StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  TouchableOpacity,
+  StyleSheet,
+} from "react-native";
 // import TodoItem from './TodoItem';
 import TodoItem from "../components/TodoItem";
 import useHomeTodoController from "../view-controller/useHomeTodoController";
- function HomeTodoScreen() {
+function HomeTodoScreen() {
   const { todos, fetchTodo, onPressCreate, onPressTodoItem } =
     useHomeTodoController();
-  const renderTodoList = ({item}) => {
+  const renderTodoList = ({ item }) => {
     return (
-      <TodoItem title={item.title} onPress={(item) => onPressTodoItem(item)} />
+      <TodoItem
+        title={item.title}
+        onPress={() => {
+          onPressTodoItem(item, item?.id);
+        }}
+      />
     );
   };
   return (
@@ -36,26 +47,26 @@ export default HomeTodoScreen;
 const styles = StyleSheet.create({
   background: {
     flex: 1,
-    backgroundColor: '#f5f5f5', // Light grey background
+    backgroundColor: "#f5f5f5", // Light grey background
     padding: 20,
   },
   headingView: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 20,
   },
   heading: {
     fontSize: 24,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
   btn: {
-    backgroundColor: '#007bff', // Blue background
+    backgroundColor: "#007bff", // Blue background
     padding: 10,
     borderRadius: 5,
   },
   btnText: {
-    color: '#fff', // White text
+    color: "#fff", // White text
     fontSize: 16,
   },
   todoList: {
