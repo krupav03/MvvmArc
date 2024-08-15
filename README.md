@@ -71,9 +71,9 @@ To get started with the Todo List Application, follow these steps:
 
 Here's a demonstration of the feature:
 
-![Feature Demo](assets/giphy.gif)
-
 ![Feature Demo](assets/giphy(1).gif)
+
+![Feature Demo](assets/giphy.gif)
 
   
 **Happy Coding!**
